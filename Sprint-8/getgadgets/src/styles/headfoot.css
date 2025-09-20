@@ -1,0 +1,200 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: #0a74da;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header .logo img {
+  height: 50px;          
+  width: 50px;           
+  border-radius: 50%;    
+  object-fit: cover;     
+  transition: transform 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.1); 
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffe600;
+}
+
+
+.username {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #f44336;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #d32f2f;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
+
+/* footer css */
+.footer {
+  background: #0a74da;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo  {
+  
+  height: 50px;           /* Set desired height */
+  width: auto;            /* Keep aspect ratio */
+  border-radius: 50%;     /* Makes it perfectly circular */
+  object-fit: cover;      /* Ensures image fits well */
+
+
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section form input {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.footer-section form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #084b9f;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-section form button:hover {
+  background: #063270;
+}
+
+.social {
+  margin-top: 15px;
+}
+
+.social a {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+

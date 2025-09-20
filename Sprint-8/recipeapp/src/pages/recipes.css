@@ -1,0 +1,201 @@
+/* ===============================
+   Global Container
+================================== */
+.recipe-container {
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff8f3;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.recipe-container h1 {
+  color: #ff6f61;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   Grid Layout
+================================== */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Recipe Card
+================================== */
+.recipe-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   Recipe Image
+================================== */
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recipe-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   Card Content
+================================== */
+.recipe-card h2 {
+  margin: 15px 0 8px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.recipe-card p {
+  color: #666;
+  font-size: 0.95rem;
+  padding: 0 10px;
+  line-height: 1.5;
+  min-height: 55px;
+}
+
+/* ===============================
+   View Button
+================================== */
+.view-btn {
+  display: inline-block;
+  margin: 15px auto 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff6f61, #ff9478);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 30px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 111, 97, 0.3);
+}
+
+.view-btn:hover {
+  background: linear-gradient(135deg, #e65b50, #ff6f61);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 111, 97, 0.4);
+}
+
+/* ===============================
+   Hover Overlay Effect
+================================== */
+.recipe-card::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 111, 97, 0.2), rgba(0, 0, 0, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recipe-card:hover::after {
+  opacity: 1;
+}
+
+/* ===============================
+   Recipe Details Page
+================================== */
+.recipe-detail {
+  padding: 40px;
+  background-color: #fff8f3;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.detail-img {
+  width: 80%;
+  max-width: 650px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.detail-img:hover {
+  transform: scale(1.03);
+}
+
+.recipe-detail h1 {
+  font-size: 2.2rem;
+  color: #ff6f61;
+  margin-bottom: 15px;
+}
+
+.detail-desc {
+  margin: 20px auto;
+  color: #444;
+  max-width: 600px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff6f61, #ff9478);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 30px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 111, 97, 0.3);
+}
+
+.back-btn:hover {
+  background: linear-gradient(135deg, #e65b50, #ff6f61);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 111, 97, 0.4);
+}
+
+/* ===============================
+   Responsive
+================================== */
+@media (max-width: 768px) {
+  .detail-img {
+    width: 95%;
+  }
+
+  .recipe-container h1 {
+    font-size: 2rem;
+  }
+
+  .recipe-card h2 {
+    font-size: 1.1rem;
+  }
+}

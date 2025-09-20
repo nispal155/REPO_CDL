@@ -1,0 +1,29 @@
+body.light {
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+body.dark {
+  background-color: #222;
+  color: #f4f4f4;
+}
+
+.theme-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.theme-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #666;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.theme-btn:hover {
+  background-color: #444;
+}

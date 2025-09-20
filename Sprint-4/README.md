@@ -1,0 +1,1 @@
+Here i have done three tasks like faq show/hide app, quiz app, theme-toogle function.
